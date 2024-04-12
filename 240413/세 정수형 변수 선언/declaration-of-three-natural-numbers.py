@@ -1,2 +1,1 @@
-a = 5
-print("A is %d" % a)
+print("7 + 23 = 30")
