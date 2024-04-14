@@ -8,4 +8,4 @@ char = input()
 if char not in letter:
     print("None")
 else:
-    print(letter.index(a))
+    print(letter.index(char))
