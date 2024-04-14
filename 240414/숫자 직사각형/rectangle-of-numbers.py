@@ -1,5 +1,4 @@
-n = int(input())
-m = int(input())
+n,m = tuple(map( int,input().split() ))
 
 arr_2d=[]
 current_num = 1
