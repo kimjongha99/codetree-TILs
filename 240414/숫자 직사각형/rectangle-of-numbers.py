@@ -1,5 +1,5 @@
-n = int(input("행의 개수(n)를 입력하세요: "))
-m = int(input("열의 개수(m)를 입력하세요: "))
+n = int(input())
+m = int(input())
 
 arr_2d=[]
 current_num = 1
