@@ -1,25 +1,19 @@
 n = int(input())
 
-arr_2d=[ [0 for _ in range(n)] 
-     for _ in range(n)
-]
+# Initialize a 2D array with zeros of size n x n
+arr_2d = [[0 for _ in range(n)] for _ in range(n)]
 
-num =1
+# We'll start numbering from 1
+num = 1
 
-for i in range(n):
-    if i % 2 =0:
-        for j in range(n):
-            arr_2d[i][j]=num
-            num+=n
-    else:
-        for j in range(n-1,-1,-1):
-            arr_2d[i][j]=num
-            num+=n
+# Fill the array by columns
+for j in range(n):  # iterating over columns
+    for i in range(n):  # iterating over rows
+        arr_2d[i][j] = num
+        num += 1
 
-
-
-
+# Print the array
 for row in arr_2d:
     for elem in row:
-        print(elem, end =" ")
+        print(elem, end=" ")
     print()
