@@ -7,8 +7,8 @@ arr_2d=[
 
 
 num=1
-for i in range(4):
-    for j in range(3):
+for i in range(n):
+    for j in range(m):
         arr_2d[i][j]+=num
         num+=1
         print(arr_2d[i][j], end=" ")
