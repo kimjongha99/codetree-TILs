@@ -1,3 +1,4 @@
-str = input().split(" ")
+str = input()
 
-print(f'{str[0][2]} {str[1]} {str[2][0]}')
+for  i in range(2,10):
+    print(str[i], end="")
