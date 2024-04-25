@@ -5,7 +5,6 @@ arr= list(map(int,input().split()))
 
 myarr = sorted(arr)
 
-print(myarr)
 
 isexist = False
 
