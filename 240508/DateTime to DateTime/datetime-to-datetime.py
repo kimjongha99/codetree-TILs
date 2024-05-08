@@ -1,30 +1,32 @@
-end_d, end_h, end_m = map(int,input().split())
+def calculate_minutes(a, b, c):
+    # Starting time: November 11, 11:11
+    start_d, start_h, start_m = 11, 11, 11
 
-start_d = 11
-start_h = 11
-start_m = 11
+    # End time provided by the input
+    end_d, end_h, end_m = a, b, c
 
-sum_min=0
+    # If the given end time is before the start time, return -1
+    if (end_d < start_d) or (end_d == start_d and end_h < start_h) or (end_d == start_d and end_h == start_h and end_m < start_m):
+        return -1
 
+    # Calculate the total minutes between the two times
+    minutes_from_start_to_midnight = (23 - start_h) * 60 + (59 - start_m) + 1
+    minutes_from_midnight_to_end = end_h * 60 + end_m
+    days_between = (end_d - start_d - 1) * 24 * 60
 
-while True:
+    # Total minutes calculation
+    if end_d == start_d:
+        # Same day calculation
+        total_minutes = (end_h - start_h) * 60 + (end_m - start_m)
+    else:
+        # Different days calculation
+        total_minutes = minutes_from_start_to_midnight + days_between + minutes_from_midnight_to_end
 
-    if start_d == end_d and start_h == end_h and start_m == end_m:
-        break
+    return total_minutes
 
+# Input
+a, b, c = map(int, input().split())
 
-    sum_min+=1
-    start_m +=1
-
-
-    if start_m == 60:
-        start_h +=1
-        start_m =0
-
-
-    if start_h == 24:
-        start_d+=1
-        start_h = 0
-
-
-print(sum_min)
+# Calculate and print result
+result = calculate_minutes(a, b, c)
+print(result)
