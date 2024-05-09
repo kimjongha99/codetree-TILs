@@ -11,7 +11,7 @@ month=[0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 date = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 DoW=0
-ans=1
+ans=0
 
 
 
@@ -22,20 +22,21 @@ if date[DoW]==yoil:
 while True:
 
     if m1 == m2 and d1 == d2:
+        print(ans)
         break
 
 
 
     d1 +=1
-
-    val = date[d1%7]
-
-    if val == yoil:
-        ans+=1
+    DoW+=1
 
 
-    if d1 == month[m1]:
-        d1 = 0
+    if d1 > month[m1]:
+        d1 =1
         m1 +=1
 
-print(ans)
+
+    if DoW>6:
+        DoW =0
+    if date[DoW] == yoil:
+        ans+=1
