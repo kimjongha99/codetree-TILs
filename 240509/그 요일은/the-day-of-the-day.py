@@ -11,7 +11,7 @@ month=[0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 date = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 DoW=0
-ans=0
+ans=1
 
 
 
