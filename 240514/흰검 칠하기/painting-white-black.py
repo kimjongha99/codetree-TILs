@@ -1,32 +1,32 @@
 n = int(input())
 
-arr = [
-    [] for _ in range(30)
-]
+# 크게 범위를 설정하여 예외 상황 방지
+MAX_K = 15000
+arr = [[] for _ in range(2 * MAX_K + 1)]
+point = MAX_K  # 중간 지점을 시작점으로 설정
 
-point = 15
+ans = [0, 0, 0]  # [white, black, gray]
 
-ans=[0]*3
 def funR(num):
     global point
-
-    for i in range(point,point+num):
+    for i in range(point, point + num):
         arr[i].append('B')
-    point += num
+    point += num - 1  # 마지막에 칠한 타일에 위치
 
 def funL(num):
     global point
-    for i in range(point-1,point-num-1, -1):
+    for i in range(point, point - num, -1):
         arr[i].append('W')
-    point-=num
+    point -= num - 1  # 마지막에 칠한 타일에 위치
 
 for _ in range(n):
-    str_n , str_c = input().split()
+    str_n, str_c = input().split()
     num = int(str_n)
-    if str_c =='R':
+    if str_c == 'R':
         funR(num)
-    if str_c == 'L':
+    elif str_c == 'L':
         funL(num)
+
 
 for row in arr:
     if len(row)>0:
@@ -38,6 +38,4 @@ for row in arr:
             else:
                 ans[1] +=1
 
-
-for ele in ans:
-    print(ele, end=" ")
+print(ans)
