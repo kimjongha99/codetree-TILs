@@ -1,36 +1,38 @@
 n = int(input())
 
-arr = [0]*201
+# Initialize an array to track the number of times each position is passed
+# We use 201 to cover the range from -100 to 100
+arr = [0] * 2001
 
-point =100
+# The starting point, which represents position 0
+point = 1000
 
-
-def funR(x):
+# Define functions to move left and right
+def move_right(x):
     global point
-    for j in range(point,  point+x):
+    for j in range(point, point + x):
         arr[j] += 1
-    point+=x
+    point += x
 
-
-def funL(x) :
+def move_left(x):
     global point
-    for j in range(point , point-x,-1):
-        arr[j] +=1
+    for j in range(point, point - x, -1):
+        arr[j] += 1
     point -= x
 
-
-for i in range(n):
-    x_str ,y_str = input().split()
+# Read the commands and execute the moves
+for _ in range(n):
+    x_str, direction = input().split()
     x = int(x_str)
-    if y_str == 'R':
-        funR(x)
-    if y_str == 'L':
-        funL(x)
+    if direction == 'R':
+        move_right(x)
+    elif direction == 'L':
+        move_left(x)
 
-
-count =0
+# Count the number of positions passed more than twice
+count = 0
 for elem in arr:
-    if elem >= 2:
-        count+=1
+    if elem >= 2:  # We want positions passed more than twice
+        count += 1
 
 print(count)
