@@ -35,7 +35,7 @@ for row in arr:
         else:
             if row.pop() == 'W':
                 ans[0] +=1
-            else:
+            if row.pop() == 'B':
                 ans[1] +=1
 
 
