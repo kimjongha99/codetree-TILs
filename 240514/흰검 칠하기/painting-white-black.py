@@ -38,4 +38,6 @@ for row in arr:
             else:
                 ans[1] +=1
 
-print(ans)
+
+for elem in ans:
+    print(elem, end=" ")
