@@ -1,8 +1,8 @@
-n, m = tuple(map(int, input().split()))
+n, m = map(int, input().split())
 
 arr = list(map(int,input().split()))
 
-x ,y = map(int,input().split())
+queries = list(map(int, input().split()))
 di= {}
 
 for elem in arr:
@@ -11,19 +11,11 @@ for elem in arr:
     else:
         di[elem]=1
 
-
-# if x in di:
-#     x1= (di[x])
-# else:
-#     x1 =0
-#
-# if y in di:
-#     x2 = (di[y])
-# else:
-#     x2 =0
-# Get the count for x and y, default to 0 if not found
-x1 = di.get(x, 0)
-x2 = di.get(y, 0)
+# 각 질의에 대해 수열에서의 등장 횟수를 출력
+result = []
+for q in queries:
+    result.append(di.get(q, 0))
 
 
-print(x1,x2)
+# 결과 출력 (공백으로 구분)
+print(' '.join(map(str, result)))
