@@ -1,4 +1,4 @@
-n , m = map(int,input().split())
+n, m = tuple(map(int, input().split()))
 
 arr = list(map(int,input().split()))
 
@@ -12,15 +12,18 @@ for elem in arr:
         di[elem]=1
 
 
-if x in di:
-    x1= (di[x])
-else:
-    x1 =0
-
-if y in di:
-    x2 = (di[y])
-else:
-    x2 =0
+# if x in di:
+#     x1= (di[x])
+# else:
+#     x1 =0
+#
+# if y in di:
+#     x2 = (di[y])
+# else:
+#     x2 =0
+# Get the count for x and y, default to 0 if not found
+x1 = di.get(x, 0)
+x2 = di.get(y, 0)
 
 
 print(x1,x2)
