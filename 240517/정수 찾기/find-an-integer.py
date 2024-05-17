@@ -8,10 +8,8 @@ n2 = int(input())
 arr2 = list(map(int,input().split()))
 
 
-s1 = set(arr2)
 
-
-for elem in s1:
+for elem in arr2:
     if elem in arr1:
         print(1)
     else:
