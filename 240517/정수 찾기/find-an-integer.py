@@ -7,10 +7,14 @@ n2 = int(input())
 
 arr2 = list(map(int,input().split()))
 
+set1 = set(arr1)
 
+result = []
 
 for elem in arr2:
-    if elem in arr1:
-        print(1)
+    if elem in set1:
+        result.append(1)
     else:
-        print(0)
+        result.append(0)
+
+print(" ".join(map(str, result)))
