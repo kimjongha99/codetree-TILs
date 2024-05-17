@@ -2,12 +2,16 @@ n, k = map(int,input().split())
 
 arr = list(map(int,input().split()))
 
-cnt =0
+di= {}
+ans =0
 
-for i in range(n):
+for num in arr:
+    if k-num in di:
+        ans += di[k-num]
 
-    for j in range(i+1,n):
-        if k == arr[i]+arr[j]:
-            cnt+=1
+    if num in di:
+        di[num] +=1
+    else:
+        di[num]=1
 
-print(cnt)
+print(ans)
