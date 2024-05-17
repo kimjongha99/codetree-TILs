@@ -17,4 +17,4 @@ for elem in arr2:
     else:
         result.append(0)
 
-print(" ".join(map(str, result)))
+print("\n".join(map(str, result)))
