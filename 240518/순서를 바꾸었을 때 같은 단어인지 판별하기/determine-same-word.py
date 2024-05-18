@@ -14,6 +14,6 @@ else:
     for i in range(len(str1)):
         if str1[i]!=str2[i]:
             isTrue = "No"
-        break
+            break
 
 print(isTrue)
