@@ -9,7 +9,7 @@ for _ in range(n):
     arr2 = [name, subject1,subject2,subject3]
     arr.append(arr2)
 
-sort_arr = sorted(arr,key= lambda x:(x[1], x[2], x[3] ), reverse= True)
+sort_arr = sorted(arr,key= lambda x:(-x[1], -x[2], -x[3]))
 
 for name, subject1,subject2,subject3 in sort_arr:
     print(name, subject1,subject2,subject3)
