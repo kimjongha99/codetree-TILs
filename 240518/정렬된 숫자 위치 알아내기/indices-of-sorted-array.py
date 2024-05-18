@@ -14,6 +14,7 @@ for  i , ele  in enumerate(arr):
         if sort_arr[j] == ele:
             if count in ans:
                 ans.append(count+1)
+                count = 0
                 break
             ans.append(count)
 
