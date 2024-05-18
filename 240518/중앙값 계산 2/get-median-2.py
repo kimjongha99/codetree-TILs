@@ -1,7 +1,6 @@
 n = int(input())
 
 arr = list(map(int,input().split()))
-print(arr)
 
 ans =[]
 
@@ -13,4 +12,5 @@ for i in range(0,n,2):
     ans.append(sub_arr[len(sub_arr)//2])
 
 
-print(ans)
+for ele in ans:
+    print(ele, end=" ")
