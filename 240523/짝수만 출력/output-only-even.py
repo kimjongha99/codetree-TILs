@@ -1,5 +1,6 @@
 a , b = map(int,input().split())
 
+
 while (a<=b):
-    print(a)
+    print(a , end=" ")
     a+=2
