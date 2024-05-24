@@ -11,6 +11,6 @@ while True:
         n= n*2+1
         cnt+=1
 
-    if n > 1000:
+    if n >= 1000:
         print(cnt)
         break
