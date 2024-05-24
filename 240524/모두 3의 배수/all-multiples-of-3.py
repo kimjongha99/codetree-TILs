@@ -10,5 +10,6 @@ for ele in arr:
         isTrue =1
     else:
         isTrue=0
+        break
 
 print(isTrue)
