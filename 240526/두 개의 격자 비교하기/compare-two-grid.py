@@ -17,7 +17,7 @@ arr2 = [
 check_arr =[
     [0 for _ in range(m)]
 
-    for _ in range(m)
+    for _ in range(n)
 ]
 
 
