@@ -10,11 +10,10 @@ for _ in range(n):
 count =0
 count2 =0
 for ele in arr1:
-    for ele1 in ele:
-        count +=1
-        if ele1[0] == 'a':
-            count2+=1
-            
+    count += len(ele)  # 문자열의 길이를 더함
+    if ele[0] == 'a':
+        count2+=1
+        
 
 
 print(count, count2)
