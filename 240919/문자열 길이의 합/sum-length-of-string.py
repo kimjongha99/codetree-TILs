@@ -12,8 +12,9 @@ count2 =0
 for ele in arr1:
     for ele1 in ele:
         count +=1
-        if ele1 == 'a':
+        if ele1[0] == 'a':
             count2+=1
+            
 
 
 print(count, count2)
